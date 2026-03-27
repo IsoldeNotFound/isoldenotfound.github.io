@@ -9,6 +9,7 @@
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
     --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
     --shadow-btn: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-btn-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s ease-in-out;
 }
 
@@ -53,17 +54,43 @@ nav { position: sticky; top: 0; background-color: var(--primary); padding: 12px 
     text-transform: uppercase;
     padding: 10px 18px;
     border-radius: 8px;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid transparent;
 }
 
-.nav-btn:hover { color: var(--white); background: rgba(255, 255, 255, 0.1); }
+.nav-btn:hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-btn-hover);
+}
 
-.nav-btn.social { padding: 8px; opacity: 0.7; background: transparent; }
+.nav-btn.social {
+    padding: 8px;
+    opacity: 0.7;
+    background: transparent;
+}
 
-.nav-btn.social:hover { opacity: 1; transform: translateY(-2px); }
+.nav-btn.social:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
 
-.nav-btn.highlighted { background-color: var(--primary-light); color: var(--white); border: 1px solid rgba(255, 255, 255, 0.2); }
+.nav-btn.highlighted {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-btn);
+}
+
+.nav-btn.highlighted:hover {
+    background-color: #3e5871;
+    border-color: rgba(255, 255, 255, 0.4);
+}
 
 main { max-width: 1000px; margin: 50px auto; padding: 0 25px; }
 
