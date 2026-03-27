@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Clement Storrer</title>
+    <title>Clément Storrer | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <img src="photo.jpg" alt="Portrait de Clément Storrer" class="profile-pic">
-        
             <div class="header-text">
                 <h1>Clément Storrer</h1>
                 <p>Élève Ingénieur — Développement Logiciel & Médias</p>
@@ -18,14 +18,14 @@
         </div>
     </header>
     <nav>
-        <a href="#bio" class="btn" >À propos</a>
-        <a href="#projets" class="btn" >Projets</a>
-        <a href="cv.pdf" class="btn" download="CV_STORRER_CLEMENT.pdf">📄 Télécharger mon CV (PDF) </a>
-        <a href="https://github.com/IsoldeNotFound" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/clemsto"  class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="nav-container">
+            <a href="#bio" class="nav-btn">À propos</a>
+            <a href="#projets" class="nav-btn">Projets</a>
+            <a href="cv.pdf" class="nav-btn highlighted" download="CV_STORRER_CLEMENT.pdf">📄 Mon CV</a>
+            <a href="https://github.com/IsoldeNotFound" class="nav-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/clemsto" class="nav-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </nav>
-    
-
     <main>
         <section id="bio">
             <h2>À propos</h2>
@@ -42,17 +42,26 @@
                     <h3>CV Typst</h3>
                     <p>Conception et codage de la mise en page de mon CV en utilisant le langage de scripting Typst.</p>
                 </div>
-            </div>
-            <div class="grid">
                 <div class="card">
-                    <h3>Mon site web </h3>
+                    <h3>Mon site web</h3>
                     <p>Conception et codage d'un site Web comme portfolio pour futur projets (sur lequel vous êtes ^^).</p>
                 </div>
             </div>
-            
+        </section>
+
+        <section id="passions">
+            <h2>Mes passions</h2>
+            <div class="card-passion">
+                <div class="passion-image">
+                    <img src="moto.jpg" alt="Photo de ma moto">
+                </div>
+                <div class="passion-content">
+                    <h3>La Moto</h3>
+                    <p>Passionné par l'ingénierie mécanique et la liberté que procure la route. Qu'il s'agisse de l'entretien technique ou de longues balades, la moto représente pour moi un équilibre parfait entre précision et évasion.</p>
+                </div>
+            </div>
         </section>
     </main>
-
     <footer>
         <p>© 2026 — Fait avec passion et déployé sur GitHub Pages</p>
     </footer>
