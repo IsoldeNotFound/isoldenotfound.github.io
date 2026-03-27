@@ -55,7 +55,7 @@
             <h2>Mes passions</h2>
             <div class="card-passion">
                 <div class="passion-image">
-                    <img src="moto.jpg" alt="Photo de ma moto">
+                    <img src="Moto.jpg" alt="Ma moto">
                 </div>
                 <div class="passion-content">
                     <h3>La Moto</h3>
@@ -84,21 +84,19 @@
     <script>
         function openCV() {
             const modal = document.getElementById("cvModal");
-            modal.classList.add("show");
+            modal.style.display = "flex";
+            setTimeout(() => { modal.classList.add("show"); }, 10);
             document.body.style.overflow = "hidden";
         }
-
         function closeCV() {
             const modal = document.getElementById("cvModal");
             modal.classList.remove("show");
+            setTimeout(() => { modal.style.display = "none"; }, 400);
             document.body.style.overflow = "auto";
         }
-
         window.onclick = function(event) {
             const modal = document.getElementById("cvModal");
-            if (event.target == modal) {
-                closeCV();
-            }
+            if (event.target == modal) { closeCV(); }
         }
     </script>
 </body>
