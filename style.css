@@ -1,8 +1,8 @@
 :root {
-    --primary: #1a4a75;
-    --primary-dark: #2c3e50;
-    --bg: #f4f4f9;
-    --text: #333;
+    --primary: #2c3e50;
+    --primary-dark: #1a252f;
+    --bg: #eceff1;
+    --text: #263238;
     --white: #ffffff;
 }
 
@@ -60,4 +60,94 @@ nav {
 
 nav a {
     color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.cv-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary);
+    color: white !important;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download .icon {
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 650px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-text {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
 }
