@@ -153,15 +153,45 @@ h2 {
     font-size: 1.3rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+    /* 1. On réduit la taille des titres pour qu'ils ne prennent pas tout l'écran */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* 2. On empile la photo et le texte verticalement */
     .header-container {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
     }
+
     .header-text {
         text-align: center;
     }
-    header h1 {
-        font-size: 1.8rem;
+
+    /* 3. On ajuste le menu pour qu'il soit plus facile à cliquer avec le pouce */
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Si les liens sont trop longs, ils passent à la ligne */
+        gap: 10px;
+        padding: 10px 5px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+
+    /* 4. On force les cartes de projets à prendre toute la largeur */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 5. Le bouton de téléchargement prend plus de place pour être cliquable */
+    .btn-download {
+        width: 90%;
+        justify-content: center;
     }
 }
