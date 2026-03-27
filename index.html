@@ -7,6 +7,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+<div id="cvModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Curriculum Vitae — Clément Storrer</h3>
+            <span class="close-btn" onclick="closeCV()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <iframe src="cv.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openCV() {
+        let modal = document.getElementById("cvModal");
+        modal.style.display = "block"; 
+        
+        setTimeout(() => {
+            modal.classList.add("show");
+        }, 10);
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeCV() {
+        let modal = document.getElementById("cvModal");
+        modal.classList.remove("show"); 
+        
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 400);
+        document.body.style.overflow = "auto"; 
+    }
+
+    window.onclick = function(event) {
+        let modal = document.getElementById("cvModal");
+        if (event.target == modal) {
+            closeCV();
+        }
+    }
+</script>
 <body>
     <header>
         <div class="header-container">
@@ -21,7 +61,7 @@
         <div class="nav-container">
             <a href="#bio" class="nav-btn">À propos</a>
             <a href="#projets" class="nav-btn">Projets</a>
-            <a href="cv.pdf" class="nav-btn highlighted" download="CV_STORRER_CLEMENT.pdf">📄 Mon CV</a>
+            <a href="javascript:void(0)" class="nav-btn highlighted" onclick="openCV()">📄 Mon CV</a>
             <a href="https://github.com/IsoldeNotFound" class="nav-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://linkedin.com/in/clemsto" class="nav-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
