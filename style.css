@@ -6,6 +6,11 @@
     --white: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; 
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
@@ -55,7 +60,15 @@ header p {
 }
 
 nav {
-    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    padding: 15px 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 nav a {
@@ -114,7 +127,7 @@ h2 {
     margin: 40px 0;
 }
 
-.btn-download {
+.btn {
     display: inline-flex;
     align-items: center;
     background-color: var(--primary);
@@ -128,13 +141,13 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.btn-download:hover {
+.btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn-download .icon {
+.btn.icon {
     margin-right: 12px;
     font-size: 1.3rem;
 }
