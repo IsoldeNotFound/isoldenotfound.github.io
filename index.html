@@ -21,9 +21,8 @@
 
 <script>
     function openCV() {
-        let modal = document.getElementById("cvModal");
-        modal.style.display = "block"; 
-        
+        const modal = document.getElementById("cvModal");
+        modal.style.display = "flex"; // On utilise flex pour le centrage
         setTimeout(() => {
             modal.classList.add("show");
         }, 10);
@@ -31,17 +30,16 @@
     }
 
     function closeCV() {
-        let modal = document.getElementById("cvModal");
-        modal.classList.remove("show"); 
-        
+        const modal = document.getElementById("cvModal");
+        modal.classList.remove("show");
         setTimeout(() => {
             modal.style.display = "none";
         }, 400);
-        document.body.style.overflow = "auto"; 
+        document.body.style.overflow = "auto";
     }
 
     window.onclick = function(event) {
-        let modal = document.getElementById("cvModal");
+        const modal = document.getElementById("cvModal");
         if (event.target == modal) {
             closeCV();
         }
